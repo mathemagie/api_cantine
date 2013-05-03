@@ -1,0 +1,29 @@
+body{
+	background: #000;
+	font-family: Arial, 'sans-serif';
+	text-align: center;
+	vertical-align: middle;
+	overflow:hidden;
+}
+
+#compteur{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -500px;
+	width: 1000px;
+	height: 500px;
+	font-size: 200px;
+	color: #FFF;
+	z-index: 2;
+}
+
+#coworkers{
+	font-size: 50px;
+	color: #FFF;
+}
+
+canvas{
+	z-index: 1;
+}
