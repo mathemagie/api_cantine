@@ -6,16 +6,16 @@ if (strstr($_SERVER['HTTP_HOST'],'localhost')) $production = 0;
 
 if (!$production){
     $hostname = 'localhost';
-    $username = 'root';
-    $password = 'root';
+    $username = 'xxx';
+    $password = 'xxx';
     ini_set('display_errors', '1');
     error_reporting(E_ALL ^ E_NOTICE);
 }
 else {
     ini_set('display_errors', '0');
     $hostname = 'localhost';
-    $username = 'root';
-    $password = 'aureliendela';
+    $username = 'xxx';
+    $password = 'xxx';
 }
 
 try
