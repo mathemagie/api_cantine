@@ -35,13 +35,22 @@
 	    return $total_number;
 	}
 
+	function add_level_noise($value) {
+		global $db;
+		$sql = "insert into level_noise values(now(),'$value')";
+		$sth = $db->query($sql);
+		echo "OK";
+	}
+
 	if ($do == 'up') up();
 	if ($do == 'down') down();
+	if ($do == 'noise') add_level_noise($_GET['val']);
+
 	
-	$total = get_total();
-	echo $total;
-	echo "<br/>";
-	$pusher->trigger( 'test_channel', 'my_event', $total );
-	echo "OK";
+	//$total = get_total();
+	//echo $total;
+	//echo "<br/>";
+	//$pusher->trigger( 'test_channel', 'my_event', $total );
+	//echo "OK";
 
 ?>
